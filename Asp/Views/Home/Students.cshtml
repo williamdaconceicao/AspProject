@@ -1,0 +1,27 @@
+@using AspCore.Models
+@model List<AspCore.Models.StudentsModel>
+
+@section icon
+{
+    <link rel="shortcut icon" href="http://www.bandai.com/tamagotchi/img/products/42800_42803_OriginalWhitePink.jpg"  type="image/x-icon"/>
+    <title>Student Page  @DateTime.Now</title>
+}
+
+
+@{
+    ViewBag.Title = "students";
+}
+@foreach(StudentsModel student in @Model)
+{
+    <ul>
+        <li>@student.Id</li>
+        <li>@student.Name</li>
+        <li>@student.Email</li>
+        <li>@student.Classes</li>
+        <li>@student.JoinDate</li>
+    </ul>
+}
+
+
+    
+

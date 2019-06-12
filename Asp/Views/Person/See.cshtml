@@ -1,0 +1,14 @@
+@using AspCore.Models
+@model AspCore.Models.Person
+
+@{
+    ViewBag.Title = "PersonList";
+}
+
+<ul>
+    <li>@Model.Firstname</li>
+    <li>@Model.Lastname</li>
+    <li>@Model.Email</li>
+    @Html.ActionLink("Edit this" , "Edit" , "Person",new { index = @Model.Id}, null  )
+
+</ul>

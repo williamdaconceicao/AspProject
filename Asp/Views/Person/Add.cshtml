@@ -1,0 +1,13 @@
+@using AspCore.Models
+@model AspCore.Models.Person
+@{
+    ViewBag.Title = "PersonList";
+}
+
+<h2>Add a person</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input value="Submit" type="submit"/>
+}

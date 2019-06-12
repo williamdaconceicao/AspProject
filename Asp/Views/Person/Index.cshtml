@@ -1,0 +1,17 @@
+@using AspCore.Models
+@model List<AspCore.Models.Person>
+
+@{
+    ViewBag.Title = "PersonList";
+}
+
+
+@foreach(Person person in @Model)
+{
+    <ul>
+        <li>@person.Firstname</li>
+        <li>@person.Lastname</li>
+        <li>@person.Email</li>
+        @Html.ActionLink("Edit this" , "Edit" , "Person",new { index = @person.Id}, null  )
+    </ul>
+}
